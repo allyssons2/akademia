@@ -40,7 +40,7 @@
                         if ($u->conectarUsuario($_REQUEST["email"], $_REQUEST["senha"]) == true) {
                             session_start();
                             $_SESSION["email"] = $u->getEmail();
-                            header("Location: acesso.php");               
+                            header("Location: listaUsuario.php");               
                         }
 
                         else {

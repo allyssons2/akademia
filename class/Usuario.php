@@ -79,7 +79,7 @@
 
         public function listarUsuario() {
             include_once('./db/conn.php');
-            $sql = "CALL psListarUsuario    ('')";
+            $sql = "CALL psListarUsuario()";
 
             $data = $conn->query($sql)->fetchAll();
 

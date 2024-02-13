@@ -48,7 +48,7 @@
             </article>
 
             <article class="button-modalidades">
-                <button>Confira todas as opções</button>
+                <a href="./modalidades.php">Confira todas as opções</a>
             </article>
         </section>
     </main>

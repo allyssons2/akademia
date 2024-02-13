@@ -103,7 +103,11 @@ body {
     align-items: center;
 }
 
-.button-modalidades button {
+.button-modalidades a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
     width: 26rem;
     height: 3rem;
 
@@ -114,11 +118,13 @@ body {
     border: none;
     border-radius: 10px;
     margin: 38px 0 28px;
+    text-decoration: none;
+    color: #000;
 
     background-color: #FAD824;
 }
 
-.button-modalidades button:hover {
+.button-modalidades a:hover {
     cursor: pointer;
     
     border: 1px solid #fafafa;
@@ -279,4 +285,81 @@ body {
 
 button {
     cursor: pointer;
+}
+
+.modalidadeFundo {
+    background-color: #262626;
+}
+
+.cartao {
+    display: flex;
+    flex-direction: row;
+
+    width: 95%;
+    height: fit-content;
+    margin: 0 2rem;
+    border-radius: 5px;
+
+    background-color: #FAD824;
+}
+
+.cartao-interno {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+
+    width: 30%;
+    padding: 2rem;
+}   
+
+.cartao-interno img {
+    width: 80%;
+}
+
+.cartao-interno span {
+    text-align: center;
+    font-size: 1.5rem;
+    line-height: 29px;
+    font-weight: 700;
+
+    color: #0A0A0A;
+}
+
+.cartao-texto {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    width: 70%;
+    padding-bottom: 8rem;
+}
+
+.cartao-texto p {
+    width: 100%;
+    margin-right: 2rem;
+
+    font-size: 1.5rem;
+    line-height: 29.05px;
+    font-weight: 400;
+
+    color: #000;
+}
+
+.cartoes {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    margin: 2rem 0;
+}
+
+.tela-modalidades h2 {
+    padding-left: 1.2rem;
+    font-size: 36px;
+    color: #FFFFFF;
+}
+
+.tela-modalidades {
+    padding: 2rem;
 }

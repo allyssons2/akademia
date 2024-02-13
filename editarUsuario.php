@@ -32,16 +32,19 @@
             <label>Cidade:</label>
             <input type='text' name='cidade' value='" . $u->getCidade() . "' required><br><br>
 
+            <label>Senha:</label>
+            <input type='text' name='senha' value='" . $u->getSenha() . "' required><br><br>
+
             <button type='submit' name='atualizar'>Atualizar</button>
             <button type='button'><a href='listaUsuario.php' id='botaoVoltar'>Cancelar</a></button>
         ";
 
         if ( isset($_REQUEST["atualizar"]) ) //evitar que o procedimento seja executado sem apertar o botão
         {
-            $u->create($_REQUEST["nome"], $_REQUEST["email"], $_REQUEST["dtNascimento"], $_REQUEST["cidade"]);
+            $u->create($_REQUEST["nome"], $_REQUEST["email"], $_REQUEST["dtNascimento"], $_REQUEST["cidade"], $_REQUEST["senha"]);
 
             echo $u->atualizarUsuario($_GET["id"]) == true ?
-                    "<p class='mensagemSucesso'>Usuário editado com sucesso.</p>" . header("Location: areaRestrita.php") :
+                    "<p class='mensagemSucesso'>Usuário editado com sucesso.</p>" . header("Location: listaUsuario.php") :
                     "<p class='mensagemErro'>Ocorreu um erro ao editar.</p>";
         }
     ?>
